@@ -1,0 +1,13 @@
+x = 10 
+for i = 1, x do
+wait (1)
+local TableChat = {"gà","nonnn","scam"} --chat
+spawn(function()
+    while wait() do 
+        pcall(function()
+            game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(TableChat[math.random(1,#TableChat)],"All")
+            wait(1)--t?c d? spam
+        end)
+    end
+end)
+end
